@@ -188,6 +188,26 @@ h6 {
 	border-radius: 7px;
 }
 
+/* Banner Waitlist Button Styles */
+.banner-text ul li .btn-grad {
+	padding: 12px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 7px;
+	background: #fff;
+	color: #7a60ff;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.banner-text ul li .btn-grad:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+}
+
 .prelative {
 	position: relative
 }
@@ -748,6 +768,11 @@ input {
 
 	.footer-copy p {
 		font-size: 10px;
+	}
+
+	.banner-text ul li .btn-grad {
+		padding: 10px 20px;
+		font-size: 14px;
 	}
 }
 
