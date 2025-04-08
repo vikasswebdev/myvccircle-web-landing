@@ -953,3 +953,53 @@ input {
 	background: rgba(255, 255, 255, 0);
 	pointer-events: none;
 }
+
+/* Google Form Container Styling */
+.google-form-container {
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+}
+
+.google-form-container p {
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.google-form-container .btn-grad {
+	display: inline-block;
+	padding: 12px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+}
+
+.google-form-container .btn-grad:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+}
+
+.google-form-container .btn-grad i {
+	margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+	.google-form-container {
+		padding: 20px;
+	}
+
+	.google-form-container p {
+		font-size: 16px;
+	}
+
+	.google-form-container .btn-grad {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
