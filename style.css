@@ -135,7 +135,7 @@ h6 {
 	position: relative;
 }
 
-.banner::before {
+/* .banner::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -144,7 +144,7 @@ h6 {
 	width: 100%;
 	height: 100%;
 	background: url(images/pattern.png);
-}
+} */
 
 .banner a.weblink {
 	color: #ffffff;
@@ -400,7 +400,7 @@ h6 {
 	position: relative;
 }
 
-.testimonial::before {
+/* .testimonial::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -409,7 +409,7 @@ h6 {
 	width: 100%;
 	height: 100%;
 	background: url(images/pattern.png);
-}
+} */
 
 .bx-prev {
 	left: -90px !important;
@@ -557,7 +557,7 @@ input {
 	position: relative;
 }
 
-.download::before {
+/* .download::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -566,7 +566,7 @@ input {
 	width: 100%;
 	height: 100%;
 	background: url(images/pattern.png);
-}
+} */
 
 .download ul {
 	list-style: none;
@@ -758,7 +758,7 @@ input {
 	overflow: hidden;
 }
 
-.contact::before {
+/* .contact::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -768,7 +768,7 @@ input {
 	background: url('images/pattern.png');
 	opacity: 0.05;
 	z-index: 1;
-}
+} */
 
 .contact .sectioner-header h3 {
 	font-size: 2.5rem;
@@ -970,7 +970,7 @@ input {
 }
 
 .google-form-container .btn-grad {
-	display: inline-block;
+	/* display: inline-block; */
 	padding: 12px 30px;
 	font-size: 16px;
 	font-weight: 600;
