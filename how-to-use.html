@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>How to Use - MyVCCircle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .how-to-use {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+        }
+
+        .sectioner-header {
+            margin-bottom: 60px;
+        }
+
+        .sectioner-header h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .sectioner-header .line {
+            width: 80px;
+            height: 4px;
+            background: #007bff;
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .sectioner-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .step-card {
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #007bff, #00bcd4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-card:hover::before {
+            opacity: 1;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .step-card h4 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .step-card p,
+        .step-card li {
+            color: #6c757d;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .example-box::before {
+            content: '💡';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .example-box strong {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .trust-section {
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .trust-section h4 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .trust-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .trust-section li {
+            color: white;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .trust-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        .trust-section .feature-icon {
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .step-card {
+                padding: 30px;
+            }
+
+            .sectioner-header h3 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h2 class="brand-text">MyVCCircle</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#about">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#features">Features</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#team">Team</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#faq">Faq</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#contact">Contact</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-------How to Use Start------->
+    <section class="how-to-use section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sectioner-header text-center fade-up">
+                        <h3>How MyVCCircle Works</h3>
+                        <span class="line"></span>
+                        <p>Simple steps to start your savings journey</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-1">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-users feature-icon"></i>
+                        <h4>Create or Join a Circle</h4>
+                        <p>Start your journey by either:</p>
+                        <ul>
+                            <li>Creating your own circle (Free)</li>
+                            <li>Joining an existing circle through admin invitation</li>
+                        </ul>
+                        <p>Each circle typically has 10 members for optimal management.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-2">
+                        <div class="step-number">2</div>
+                        <i class="fas fa-money-bill-wave feature-icon"></i>
+                        <h4>Monthly Contribution</h4>
+                        <p>All members contribute a fixed amount monthly (e.g., ₹5,000)</p>
+                        <p>This creates a pooled fund (e.g., ₹50,000 from 10 members)</p>
+                        <div class="example-box">
+                            <strong>Example:</strong>
+                            <p>10 members × ₹5,000 = ₹50,000 pool</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-3">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-gavel feature-icon"></i>
+                        <h4>Bidding Process</h4>
+                        <p>Members place bids to receive the pool early</p>
+                        <p>The lowest bidder wins the full pool (minus their bid)</p>
+                        <div class="example-box">
+                            <strong>Example:</strong>
+                            <p>Bids: ₹2,500, ₹1,800, ₹2,100</p>
+                            <p>Winner: ₹1,800 → receives ₹48,200</p>
+                            <p>Other members share the ₹1,800 bid amount</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-4">
+                        <div class="step-number">4</div>
+                        <i class="fas fa-lock feature-icon"></i>
+                        <h4>Payouts and Lock</h4>
+                        <ul>
+                            <li>Winner receives the payout for that month</li>
+                            <li>Once a user wins, they can't bid again in that circle</li>
+                            <li>All members continue monthly contributions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-5">
+                        <div class="step-number">5</div>
+                        <i class="fas fa-sync-alt feature-icon"></i>
+                        <h4>Monthly Cycle</h4>
+                        <p>The process repeats each month with:</p>
+                        <ul>
+                            <li>A different winner each month</li>
+                            <li>Everyone receives the pool once</li>
+                            <li>Circle continues until all members have won</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card fade-up delay-5">
+                        <div class="step-number">6</div>
+                        <i class="fas fa-robot feature-icon"></i>
+                        <h4>Smart Features</h4>
+                        <ul>
+                            <li>AI-powered bid suggestions</li>
+                            <li>Group health analysis</li>
+                            <li>Contribution forecasting</li>
+                            <li>Admin tools for circle management</li>
+                            <li>Automated reminders and reports</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="trust-section fade-up">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <h4>Trust and Security</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Circle admins verify all members</li>
+                                    <li>Secure payment processing</li>
+                                    <li>Transparent bidding system</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Real-time contribution tracking</li>
+                                    <li>Automated payment reminders</li>
+                                    <li>24/7 support system</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------How to Use End------->
+
+    <footer class="footer-copy">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>2025 &copy; MyVCCircle. All Rights Reserved. Made with ❤️ by <a href="https://codeoflyf.in"
+                            target="_blank" rel="dofollow">Codeoflyf.in</a> | <a href="privacy-policy.html">Privacy
+                            Policy</a> | <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW();
+        wow.init();
+
+        // Add fade-up animation on scroll
+        function checkFade() {
+            const elements = document.querySelectorAll('.fade-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+
+</html>
