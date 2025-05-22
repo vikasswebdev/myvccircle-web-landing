@@ -415,8 +415,24 @@
             });
         }
 
-        window.addEventListener('scroll', checkFade);
-        window.addEventListener('load', checkFade);
+        // Handle navbar background on scroll
+        function handleNavbar() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scroll');
+            } else {
+                navbar.classList.remove('nav-scroll');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            checkFade();
+            handleNavbar();
+        });
+        window.addEventListener('load', () => {
+            checkFade();
+            handleNavbar();
+        });
     </script>
 </body>
 
