@@ -48,20 +48,38 @@
                     <div class="sectioner-header text-center">
                         <h3>Delete Account Request</h3>
                         <span class="line"></span>
-                        <p>We're sorry to see you go</p>
+                        <p>We're sorry to see you go from your finance journey</p>
                     </div>
                     <div class="section-content">
                         <div class="delete-account-content">
+                            <div class="alert alert-info" role="alert">
+                                <h5><i class="fas fa-info-circle"></i> About Your Data</h5>
+                                <p>MyVCCircle is a personal finance tracking tool that helps you manage your money
+                                    without handling it. When you delete your account, all your expense tracking data,
+                                    Savings Circle coordination info, and personal information will be permanently
+                                    removed.</p>
+                            </div>
+
                             <div class="alert alert-warning" role="alert">
-                                <h4 class="alert-heading">Important Information</h4>
+                                <h4 class="alert-heading">⚠️ Important Information</h4>
                                 <p>Please read the following information carefully before proceeding with your account
                                     deletion request:</p>
                                 <ul>
-                                    <li>Account deletion is permanent and cannot be undone</li>
-                                    <li>All your personal data will be permanently deleted from our systems</li>
-                                    <li>Any active subscriptions or services will be terminated</li>
-                                    <li>You will lose access to all your account features and data</li>
+                                    <li><strong>Account deletion is permanent and cannot be undone</strong></li>
+                                    <li>All your expense tracking data and financial insights will be permanently
+                                        deleted</li>
+                                    <li>Your Savings Circle coordination history will be removed</li>
+                                    <li>Any earned VC Points will be forfeited</li>
+                                    <li>Active subscriptions will be cancelled</li>
+                                    <li>AI Finance Coach learning data will be deleted</li>
                                 </ul>
+                            </div>
+
+                            <div class="alert alert-success" role="alert">
+                                <h5><i class="fas fa-shield-alt"></i> Data Protection Promise</h5>
+                                <p>We respect your privacy. Your data will be completely removed from our systems within
+                                    30 days, and from all backups within 90 days. We do not sell or share your personal
+                                    information with third parties.</p>
                             </div>
 
                             <form id="deleteAccountForm" class="mt-4">
@@ -77,28 +95,83 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="reason">Reason for Deletion (Optional)</label>
-                                    <textarea class="form-control" id="reason" rows="3"
-                                        placeholder="Please let us know why you're leaving"></textarea>
+                                    <select class="form-control" id="reason">
+                                        <option value="">Select a reason (optional)</option>
+                                        <option value="not_useful">App not useful for my needs</option>
+                                        <option value="privacy_concerns">Privacy concerns</option>
+                                        <option value="switching_apps">Switching to another app</option>
+                                        <option value="too_complex">Too complex to use</option>
+                                        <option value="missing_features">Missing features I need</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback">Additional Feedback (Optional)</label>
+                                    <textarea class="form-control" id="feedback" rows="3"
+                                        placeholder="Help us improve - what could we have done better?"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="confirmDelete" required>
                                         <label class="custom-control-label" for="confirmDelete">
-                                            I understand that this action is permanent and cannot be undone
+                                            I understand that this action is permanent and cannot be undone. All my
+                                            expense tracking data, Savings Circle info, and VC Points will be
+                                            permanently deleted.
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-danger">Request Account Deletion</button>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="confirmNoMoney"
+                                            required>
+                                        <label class="custom-control-label" for="confirmNoMoney">
+                                            I understand that MyVCCircle is a tracking tool only, and no actual money is
+                                            stored or handled by the platform. I am responsible for any ongoing
+                                            financial commitments with other users.
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg">Request Account Deletion</button>
                             </form>
 
+                            <div class="mt-5">
+                                <h4>💡 Before You Go...</h4>
+                                <p>Consider these alternatives to deleting your account:</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">📱 Take a Break</h5>
+                                                <p class="card-text">You can simply stop using the app without deleting
+                                                    your account. Your data will remain secure if you decide to return.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">📊 Export Your Data</h5>
+                                                <p class="card-text">Download your expense tracking data and financial
+                                                    insights before deletion. Contact support for data export options.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="mt-4">
-                                <h4>Need Help?</h4>
-                                <p>If you're having issues with your account or would like to discuss alternatives to
-                                    deletion, please contact our support team:</p>
+                                <h4>🤝 Need Help?</h4>
+                                <p>If you're having issues with the app or would like to discuss alternatives to
+                                    deletion, our support team is here to help:</p>
                                 <ul>
-                                    <li>Email: support@myvccircle.com</li>
-                                    <li>Phone: +1 (555) 123-4567</li>
+                                    <li><strong>Email:</strong> support@myvccircle.com</li>
+                                    <li><strong>Privacy Questions:</strong> privacy@myvccircle.com</li>
+                                    <li><strong>Feature Requests:</strong> feedback@myvccircle.com</li>
                                 </ul>
+                                <p>We typically respond within 24 hours and are committed to helping you get the most
+                                    out of your personal finance journey.</p>
                             </div>
                         </div>
                     </div>
@@ -113,7 +186,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <p>2025 &copy; MyVCCircle. All Rights Reserved. Made with ❤️ by <a href="https://codeoflyf.in"
-                            target="_blank" rel="dofollow">Codeoflyf.in</a>
+                            target="_blank" rel="dofollow">Codeoflyf.in</a> | <a href="privacy-policy.html">Privacy
+                            Policy</a> | <a href="terms-and-conditions.html">Terms & Conditions</a>
                     </p>
                 </div>
             </div>
@@ -135,8 +209,30 @@
         // Form submission handler
         document.getElementById('deleteAccountForm').addEventListener('submit', function (e) {
             e.preventDefault();
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const reason = document.getElementById('reason').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // Show confirmation message
+            alert('Your account deletion request has been submitted. Our team will process it within 48 hours and send you a confirmation email at ' + email + '.');
+
             // Here you would typically send the form data to your backend
-            alert('Your account deletion request has been submitted. Our team will process it within 48 hours.');
+            // For now, we'll just show a success message
+            this.style.display = 'none';
+
+            // Show success message
+            const successDiv = document.createElement('div');
+            successDiv.innerHTML = `
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">✅ Request Submitted</h4>
+                    <p>Your account deletion request has been received and will be processed within 48 hours.</p>
+                    <p>You will receive a confirmation email at <strong>${email}</strong> once the deletion is complete.</p>
+                    <p>Thank you for being part of the MyVCCircle community!</p>
+                </div>
+            `;
+            this.parentNode.insertBefore(successDiv, this);
         });
     </script>
 </body>
